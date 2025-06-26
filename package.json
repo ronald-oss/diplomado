@@ -1,0 +1,47 @@
+{
+  "name": "express-app-ts",
+  "version": "1.0.0",
+  "description": "Proyecto del diplomado desarrollado por Pereira Reyes Ronal. Aplicación backend en Node.js con Express y TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "build": "prisma generate && tsc",
+    "start": "prisma generate && prisma migrate deploy && node dist/main.js",
+    "postinstall": "prisma generate && prisma migrate deploy",
+    "dev": "prisma generate && nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/main.ts",
+    "lint": "eslint 'src/**/*.ts'"
+  },
+  "keywords": [],
+  "author": "Pereira Reyes Ronald",
+  "license": "ISC",
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronald-oss/diplomado.git"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.15.29",
+    "dotenv": "^16.5.0",
+    "eslint": "^9.2.0",
+    "express": "^4.18.4",
+    "install": "^0.13.0",
+    "nodemon": "^3.0.1",
+    "npm": "^11.4.1",
+    "prettier": "^3.3.5",
+    "prisma": "^5.8.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.9.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.2",
+    "pino": "^9.0.7",
+    "pino-pretty": "^13.0.0",
+    "zod": "^3.25.56"
+  }
+}
+
